@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xovaxe – Step into Future</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+
+  <style>
+    :root {
+      --primary: #c31fe1;
+      --secondary: #ff007f;
+      --dark: #050505;
+      --light: #ffffff;
+      --gray: #d0d0d0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at left top, #2c003e 0%, #050505 60%);
+      color: var(--light);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      width: 100%;
+      padding: 1rem 3.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--light);
+      font-weight: 400;
+      position: relative;
+      padding: 0.25rem 0.5rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background: var(--primary);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      transform: scaleX(1);
+    }
+
+    .register-btn {
+      background: var(--secondary);
+      border: none;
+      padding: 0.6rem 1.4rem;
+      border-radius: 9999px;
+      color: var(--light);
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.25s ease;
+    }
+
+    .register-btn:hover {
+      opacity: 0.8;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem 3.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 550px;
+    }
+
+    .hero h1 {
+      font-size: 3.8rem;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+
+    .hero h1 span.future {
+      display: block;
+      font-family: 'Pacifico', cursive;
+      color: var(--secondary);
+      font-size: 4.2rem;
+    }
+
+    .hero p {
+      margin: 1rem 0 2rem;
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.8rem;
+      border-radius: 50px;
+      background: var(--primary);
+      color: var(--light);
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      margin-right: 1rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      text-decoration: none;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(195, 31, 225, 0.3);
+    }
+
+    /* Stats */
+    .stats {
+      margin-top: 4rem;
+      font-size: 2.2rem;
+      font-weight: 600;
+    }
+
+    .stats small {
+      font-size: 0.75rem;
+      display: block;
+      margin-top: 0.2rem;
+      color: var(--gray);
+      font-weight: 400;
+      letter-spacing: 0.04em;
+    }
+
+    /* HERO IMAGE */
+    .blob {
+      width: 340px;
+      animation: float 6s ease-in-out infinite;
+      filter: drop-shadow(0 0 12px rgba(255, 0, 128, 0.35));
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-18px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 860px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-image {
+        margin-top: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="brand">Xovaxe</div>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#orders">Orders</a></li>
+      <li><a href="#features">Features</a></li>
+    </ul>
+    <button class="register-btn" onclick="location.href='register.html'">Register</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Step into <span class="future">Future</span></h1>
+      <p>
+        Lorem ipsum is a placeholder text commonly used in design and typesetting to fill space where real content is not yet available. It consists of Latin words and phrases that don't make coherent sense.
+      </p>
+      <a class="btn" href="get-started.html">Get Started</a>
+      <a class="btn btn-outline" href="pricing.html">Pricing</a>
+
+      <div class="stats">
+        100k
+        <small>Worldwide Users</small>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <!-- A shiny 3D blob image (free Unsplash placeholder) -->
+      <img class="blob" src="https://images.unsplash.com/photo-1618934060946-0593fe61adb4?auto=format&fit=crop&w=600&q=80" alt="3D cosmic blob" />
+    </div>
+  </section>
+
+  <!-- Built with Spline badge -->
+  <div style="position: fixed; bottom: 12px; right: 12px; font-size: 0.75rem; color: var(--gray);">
+    Built with <a href="https://spline.design" target="_blank" style="color: var(--primary); text-decoration: none;">Spline</a>
+  </div>
+
+  <!-- Minimal JS for smooth-scroll (optional) -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
